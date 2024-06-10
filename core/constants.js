@@ -255,6 +255,12 @@ Blockly.OUTPUT_SHAPE_ROUND = 2;
 Blockly.OUTPUT_SHAPE_SQUARE = 3;
 
 /**
+ * ENUM for output shape: json object "{}" (objects).
+ * @const
+ */
+Blockly.OUTPUT_SHAPE_OBJECT = 4;
+
+/**
  * ENUM for categories.
  * @const
  */

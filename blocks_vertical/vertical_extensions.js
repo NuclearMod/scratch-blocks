@@ -144,6 +144,32 @@ Blockly.ScratchBlocks.VerticalExtensions.OUTPUT_BOOLEAN = function() {
 };
 
 /**
+ * Extension to make represent an array reporter in Scratch-Blocks.
+ * That means the block has inline inputs, a round output shape, and a 'array'
+ * output type.
+ * @this {Blockly.Block}
+ * @readonly
+ */
+Blockly.ScratchBlocks.VerticalExtensions.OUTPUT_ARRAY = function() {
+  this.setInputsInline(true);
+  this.setOutputShape(Blockly.OUTPUT_SHAPE_ARRAY);
+  this.setOutput(true, 'Array');
+};
+
+/**
+ * Extension to make represent an object reporter in Scratch-Blocks.
+ * That means the block has inline inputs, a round output shape, and a 'array'
+ * output type.
+ * @this {Blockly.Block}
+ * @readonly
+ */
+Blockly.ScratchBlocks.VerticalExtensions.OUTPUT_OBJECT = function() {
+  this.setInputsInline(true);
+  this.setOutputShape(Blockly.OUTPUT_SHAPE_OBJECT);
+  this.setOutput(true, 'Object');
+};
+
+/**
  * Mixin to add a context menu for a procedure definition block.
  * It adds the "edit" option and removes the "duplicate" option.
  * @mixin
@@ -266,7 +292,11 @@ Blockly.ScratchBlocks.VerticalExtensions.registerAll = function() {
       Blockly.ScratchBlocks.VerticalExtensions.OUTPUT_STRING);
   Blockly.Extensions.register('output_boolean',
       Blockly.ScratchBlocks.VerticalExtensions.OUTPUT_BOOLEAN);
-
+  Blockly.Extensions.register('output_array',
+      Blockly.ScratchBlocks.VerticalExtensions.OUTPUT_ARRAY);
+  Blockly.Extensions.register('output_object',
+      Blockly.ScratchBlocks.VerticalExtensions.OUTPUT_OBJECT);
+      
   // Custom procedures have interesting context menus.
   Blockly.Extensions.registerMixin('procedure_def_contextmenu',
       Blockly.ScratchBlocks.VerticalExtensions.PROCEDURE_DEF_CONTEXTMENU);
